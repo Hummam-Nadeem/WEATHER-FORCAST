@@ -58,7 +58,7 @@ function getWeatherData() {
             weatherNameInDiv1.appendChild(textweatherNameInDiv1)
             let humdityInDiv1 = document.createElement('p')
             humdityInDiv1.setAttribute('class', 'humdityInDiv1')
-            let texthumdityInDiv1 = document.createTextNode(`humdity :${response.data.current.humidity}%`)
+            let texthumdityInDiv1 = document.createTextNode(`Humdity : ${response.data.current.humidity}%`)
             humdityInDiv1.appendChild(texthumdityInDiv1)
             let windInDiv1 = document.createElement('p')
             windInDiv1.setAttribute('class', 'windInDiv1')
@@ -152,7 +152,7 @@ function getWeatherData() {
 
                 let humidityInDiv3 = document.createElement('h4')
                 humidityInDiv3.setAttribute('class', "humidityInDiv3")
-                let texthumidityInDiv3 = document.createTextNode(`humidity :${response.data.forecast.forecastday[i].day.avghumidity}%`)
+                let texthumidityInDiv3 = document.createTextNode(`Humidity: ${response.data.forecast.forecastday[i].day.avghumidity}%`)
                 humidityInDiv3.appendChild(texthumidityInDiv3)
                 let dateInDiv3 = document.createElement('h2')
                 dateInDiv3.setAttribute('class', 'dateInDiv3')
@@ -166,8 +166,8 @@ function getWeatherData() {
                 foreCastlistDiv3.appendChild(humidityInDiv3)
                 foreCastlistDiv3.appendChild(dateInDiv3)
 
-                foreCastlist.appendChild(foreCastlistDiv1)
                 foreCastlist.appendChild(foreCastlistDiv2)
+                foreCastlist.appendChild(foreCastlistDiv1)
                 foreCastlist.appendChild(foreCastlistDiv3)
 
                 newELem2.appendChild(foreCastlist);
